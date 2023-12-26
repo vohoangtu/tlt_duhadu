@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="95d258e4-6231-43a5-835c-f1253bc1b625" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerConfigs">
+    <option name="configs">
+      <option value="$PROJECT_DIR$/admin/elfinder/composer.json" />
+      <option value="$PROJECT_DIR$/libraries/WebpConvert/composer.json" />
+      <option value="$PROJECT_DIR$/libraries/scssphp/composer.json" />
+    </option>
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/libraries/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.1">
+    <include_path>
+      <path value="$PROJECT_DIR$/libraries/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/libraries/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/libraries/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/libraries/vendor/composer" />
+      <path value="$PROJECT_DIR$/libraries/vendor/scssphp/scssphp" />
+      <path value="$PROJECT_DIR$/libraries/WebpConvert/vendor/rosell-dk/webp-convert" />
+      <path value="$PROJECT_DIR$/libraries/WebpConvert/vendor/composer" />
+      <path value="$PROJECT_DIR$/libraries/WebpConvert/vendor/rosell-dk/image-mime-type-guesser" />
+      <path value="$PROJECT_DIR$/libraries/vendor/illuminate/container" />
+      <path value="$PROJECT_DIR$/libraries/vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/libraries/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/libraries/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/libraries/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/libraries/vendor/illuminate/collections" />
+      <path value="$PROJECT_DIR$/libraries/vendor/illuminate/macroable" />
+      <path value="$PROJECT_DIR$/libraries/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/libraries/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/libraries/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/libraries/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/libraries/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/libraries/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/libraries/vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/libraries/vendor/illuminate/config" />
+      <path value="$PROJECT_DIR$/libraries/vendor/illuminate/cache" />
+      <path value="$PROJECT_DIR$/libraries/vendor/carbonphp/carbon-doctrine-types" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2XToTAMHMVfTmyJjRiMS14KYoyv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Laragon/xaydunghoangphuc/view",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Laragon\xaydunghoangphuc\view" />
+      <recent name="D:\Laragon\xaydunghoangphuc" />
+      <recent name="D:\Source_Code\LARAGON_PHP_112023\xaydung\libraries" />
+      <recent name="D:\Source_Code\LARAGON_PHP_112023\xaydung\admin\templates\news" />
+      <recent name="D:\Source_Code\LARAGON_PHP_112023\xaydung" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Source_Code\LARAGON_PHP_102023\quatbuicongnghiep" />
+      <recent name="D:\Source_Code\LARAGON_PHP_102023\quatbuicongnghiep\frontend" />
+      <recent name="D:\Source_Code\LARAGON_PHP_102023\quatbuicongnghiep\storage" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.297" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95d258e4-6231-43a5-835c-f1253bc1b625" name="Changes" comment="" />
+      <created>1698662436758</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698662436758</updated>
+      <workItem from="1698662437974" duration="620000" />
+      <workItem from="1698675105022" duration="10897000" />
+      <workItem from="1698791137297" duration="2797000" />
+      <workItem from="1698852758885" duration="10068000" />
+      <workItem from="1700450570826" duration="5610000" />
+      <workItem from="1700706135028" duration="11049000" />
+      <workItem from="1700792699753" duration="19717000" />
+      <workItem from="1701744505250" duration="14033000" />
+      <workItem from="1703560175706" duration="16205000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
