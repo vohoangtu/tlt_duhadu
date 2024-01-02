@@ -5,5 +5,8 @@
                 UPLOAD_NEWS_L, 'image' => $item['photo'], 'alt' => $item['name' . $lang]]) ?>
         </p>
         <h3 class="name-product text-split"><?= $item['name' . $lang] ?></h3>
+        <p class="price-product text-center">
+            <span class="price-new">Liên hệ: <?=$optsetting["hotline"]?></span>
+        </p>
     </a>
 </div>

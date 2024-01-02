@@ -21,6 +21,9 @@
     <pharConfigPath>$PROJECT_DIR$/libraries/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -66,7 +69,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Laragon/xaydunghoangphuc/view",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Source_Code/LARAGON_PHP_112023/tlt/assets/fonts",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -77,11 +81,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Source_Code\LARAGON_PHP_112023\tlt\assets\fonts" />
       <recent name="D:\Laragon\xaydunghoangphuc\view" />
       <recent name="D:\Laragon\xaydunghoangphuc" />
       <recent name="D:\Source_Code\LARAGON_PHP_112023\xaydung\libraries" />
       <recent name="D:\Source_Code\LARAGON_PHP_112023\xaydung\admin\templates\news" />
-      <recent name="D:\Source_Code\LARAGON_PHP_112023\xaydung" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Source_Code\LARAGON_PHP_102023\quatbuicongnghiep" />
@@ -113,6 +117,7 @@
       <workItem from="1700792699753" duration="19717000" />
       <workItem from="1701744505250" duration="14033000" />
       <workItem from="1703560175706" duration="16205000" />
+      <workItem from="1704222456984" duration="4061000" />
     </task>
     <servers />
   </component>

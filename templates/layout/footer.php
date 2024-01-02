@@ -2,7 +2,7 @@
     <div class="footer-article">
         <div class="wrap-content">
             <div class="row">
-                <div class="footer-news col-sm-6">
+                <div class="footer-news col-sm-5">
                     <h2 class="footer-title"><?= $footer['name' . $lang] ?></h2>
                     <div class="footer-info"><?= $func->decodeHtmlChars($footer['content' . $lang]) ?></div>
                 </div>
@@ -13,41 +13,19 @@
                             <li><a href="<?= $v[$sluglang] ?>" title="<?= $v['name' . $lang] ?>"><?= $v['name' . $lang] ?></a></li>
                         <?php } ?>
                     </ul>
-                    <div class="my-3">
-                        <a href="" class="bct"><img src="upload/photo/892789382334.png" alt="Công ty TNHH Cơ Khí Minh
-                         An
-                        Phát"></a>
-                    </div>
                 </div>
 
-                <div class="footer-news col-sm-3">
-                    <h2 class="footer-title  fs-18">Fanpage facebook</h2>
-                    <?= $addons->set('fanpage-facebook', 'fanpage-facebook', 2); ?>
+                <div class="footer-news col-sm-4">
+                        <a class="fanpagefb-header" href="https://www.facebook.com/profile.php?id=100094437609398&amp;mibextid=LQQJ4d">
+                            <img class="lazy loaded" onerror="this.src='thumbs/400x400x1/assets/images/noimage.png';"
+                                 data-src="http://siquanaotreemquangchau.com/thumbs/400x400x1/upload/photo/thoi-trang-du-tiec-cho-be-gai230620202320124355-8625.jpg" alt="@ThanhE-chuyên sỉ quần áo trẻ em QC" src="http://siquanaotreemquangchau.com/thumbs/400x400x1/upload/photo/thoi-trang-du-tiec-cho-be-gai230620202320124355-8625.jpg" data-was-processed="true">                        <section>
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Follow Me</span>
+                                <p>@ThanhE-chuyên sỉ quần áo trẻ em QC</p>
+                            </section>
+                        </a>
                 </div>
-            </div>
-        </div>
-    </div>
-    <?php if(isset($tagsProduct) || isset($tagsNews)){ ?>
-        <div class="footer-tags">
-            <div class="wrap-content">
-                <?php if(isset($tagsProduct) && !empty($tagsProduct)){
-                    include TEMPLATE . "components/tags_product.php";
-                } ?>
-                <?php if(isset($tagsNews) && !empty($tagsNews)){
-                    include TEMPLATE . "components/tags_news.php";
-                } ?>
-            </div>
-        </div>
-    <?php } ?>
-    <div class="footer-powered">
-        <div class="wrap-content">
-            <div class="row">
-                <div class="footer-copyright col-md-6">2023 CÔNG TY TNHH XÂY DỰNG HOÀNG PHÚC TÂY NINH. Design by tltvietnam.vn</div>
-                <div class="footer-statistic col-md-6">
-                    <span><?= dangonline ?>: <?= $online ?></span>
-                    <span><?= trongthang ?>: <?= $counter['month'] ?></span>
-                    <span><?= tongtruycap ?>: <?= $counter['total'] ?></span>
-                </div>
+                <div class="slogan_footer">Thế giới thời trang bé yêu</div>
             </div>
         </div>
     </div>

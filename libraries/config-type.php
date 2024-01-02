@@ -15,7 +15,7 @@ $config['group'] = array(
 );
 
 /* Config type - Product */
-//require_once LIBRARIES . 'type/config-type-product.php';
+require_once LIBRARIES . 'type/config-type-product.php';
 
 /* Config type - Tags */
 require_once LIBRARIES . 'type/config-type-tags.php';

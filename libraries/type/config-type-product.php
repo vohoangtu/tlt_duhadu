@@ -1,7 +1,8 @@
 <?php
 /* Sản phẩm */
-$nametype = "xay-dung";
-$config['product'][$nametype]['title_main'] = "Xây Dựng";
+$nametype = "san-pham";
+$config['product'][$nametype]['title_main'] = "Sản Phẩm";
+$config['product'][$nametype]['menu'] = true;
 $config['product'][$nametype]['dropdown'] = true;
 $config['product'][$nametype]['list'] = true;
 $config['product'][$nametype]['cat'] = true;

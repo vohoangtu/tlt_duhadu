@@ -101,60 +101,69 @@ $__table = [
     'product', 'news'
 ];
 
-foreach ($__table as $table){
-    $distinctType[$table] = array_keys($config[$table] ?? []);
-}
-function setRequick($field, $key, $nameType, $tbl, $config){
-    return [
-        "tbl" => $tbl,
-        "field" => $field,
-        "source" => $config[$key][$nameType]['source'] ?? $key,
-        "com" => $config[$key][$nameType]['com'] ?? $nameType,
-        "type" => $nameType,
-        "menu" => $config[$key][$nameType]['menu'] ?? false
-    ];
-}
-
-foreach ($distinctType as $key => $types){
-    foreach ($types as  $nameType) {
-        if (!isset($config[$key][$nameType])) continue;
-            $requick[] = setRequick("id", $key, $nameType, $key, $config);
-
-        if (isset($config[$key][$nameType]['list']) && isset($config[$key][$nameType]['title_main_list'])) {
-            $requick[] = setRequick("idl", $key, $nameType, $key . "_list", $config);
-        }
-
-        if (isset($config[$key][$nameType]['cat']) && isset($config[$key][$nameType]['title_main_cat'])) {
-            $requick[] = setRequick("idc", $key, $nameType, $key . "_cat", $config);
-        }
-
-        if (isset($config[$key][$nameType]['item']) && isset($config[$key][$nameType]['title_main_item'])) {
-            $requick[] = setRequick("idi", $key, $nameType, $key . "_item", $config);
-        }
-
-        if (isset($config[$key][$nameType]['sub']) && isset($config[$key][$nameType]['title_main_sub'])) {
-            $requick[] = setRequick("ids", $key, $nameType, $key . "_sub", $config);
-        }
-
-        if (isset($config[$key][$nameType]['brand']) && isset($config[$key][$nameType]['title_main_brand'])) {
-            $requick[] = setRequick("idb", $key, $nameType, $key . "_brand", $config);
-        }
+foreach ($__table as $table) {
+    $row = $d->rawQueryOne("select id,namevi,type from #_$table where $sluglang = ? and find_in_set('hienthi',status) limit 0,1", array($com));
+    if($row){
+        $source = $table;
+        $template = "{$source}/{$source}" . '_detail';
+        $seo->set('type', $source =='product' ? "product" : "article");
+        $titleMain = $row["namevi"];
+        $type = $row['type'] ?? null;
     }
 }
-
-/* Tối ưu link */
-$requick = array_merge($requick, array(
-    array("tbl" => "tags", "tbltag" => "product", "field" => "id", "source" => "tags", "com" => "tags-san-pham", "type" => "san-pham", "menu" => true),
-    array("tbl" => "tags", "tbltag" => "news", "field" => "id", "source" => "tags", "com" => "tags-tin-tuc", "type" => "tin-tuc", "menu" => true),
-    array("tbl" => "product", "field" => "id", "source" => "product", "com" => "thu-vien-anh", "type" => "thu-vien-anh", "menu" => true),
-    array("tbl" => "photo", "field" => "id", "source" => "video", "com" => "video", "type" => "video", "menu" => true),
-    array("tbl" => "static", "field" => "id", "source" => "static", "com" => "gioi-thieu", "type" => "gioi-thieu", "menu" => true),
-    array("tbl" => "", "field" => "id", "source" => "", "com" => "lien-he", "type" => "", "menu" => true),
-));
+if(!empty($com) && !in_array($com, ['index', 'tim-kiem', 'account', 'sitemap'])){
 
 
-/* Find data */
-if (!empty($com) && !in_array($com, ['tim-kiem', 'account', 'sitemap'])) {
+    foreach ($__table as $table){
+        $distinctType[$table] = array_keys($config[$table] ?? []);
+    }
+    function setRequick($field, $key, $nameType, $tbl, $config){
+        return [
+            "tbl" => $tbl,
+            "field" => $field,
+            "source" => $config[$key][$nameType]['source'] ?? $key,
+            "com" => $config[$key][$nameType]['com'] ?? $nameType,
+            "type" => $nameType,
+            "menu" => $config[$key][$nameType]['menu'] ?? false
+        ];
+    }
+    foreach ($distinctType as $key => $types){
+        foreach ($types as  $nameType) {
+            if (!isset($config[$key][$nameType])) continue;
+            $requick[] = setRequick("id", $key, $nameType, $key, $config);
+
+            if (isset($config[$key][$nameType]['list']) && isset($config[$key][$nameType]['title_main_list'])) {
+                $requick[] = setRequick("idl", $key, $nameType, $key . "_list", $config);
+            }
+
+            if (isset($config[$key][$nameType]['cat']) && isset($config[$key][$nameType]['title_main_cat'])) {
+                $requick[] = setRequick("idc", $key, $nameType, $key . "_cat", $config);
+            }
+
+            if (isset($config[$key][$nameType]['item']) && isset($config[$key][$nameType]['title_main_item'])) {
+                $requick[] = setRequick("idi", $key, $nameType, $key . "_item", $config);
+            }
+
+            if (isset($config[$key][$nameType]['sub']) && isset($config[$key][$nameType]['title_main_sub'])) {
+                $requick[] = setRequick("ids", $key, $nameType, $key . "_sub", $config);
+            }
+
+            if (isset($config[$key][$nameType]['brand']) && isset($config[$key][$nameType]['title_main_brand'])) {
+                $requick[] = setRequick("idb", $key, $nameType, $key . "_brand", $config);
+            }
+        }
+    }
+
+    /* Tối ưu link */
+    $requick = array_merge($requick, array(
+        array("tbl" => "tags", "tbltag" => "product", "field" => "id", "source" => "tags", "com" => "tags-san-pham", "type" => "san-pham", "menu" => true),
+        array("tbl" => "tags", "tbltag" => "news", "field" => "id", "source" => "tags", "com" => "tags-tin-tuc", "type" => "tin-tuc", "menu" => true),
+        array("tbl" => "product", "field" => "id", "source" => "product", "com" => "thu-vien-anh", "type" => "thu-vien-anh", "menu" => true),
+        array("tbl" => "photo", "field" => "id", "source" => "video", "com" => "video", "type" => "video", "menu" => true),
+        array("tbl" => "static", "field" => "id", "source" => "static", "com" => "gioi-thieu", "type" => "gioi-thieu", "menu" => true),
+        array("tbl" => "", "field" => "id", "source" => "", "com" => "lien-he", "type" => "", "menu" => true),
+    ));
+    /* Find data */
     foreach ($requick as $k => $v) {
         $urlTbl = (!empty($v['tbl'])) ? $v['tbl'] : '';
         $urlTblTag = (!empty($v['tbltag'])) ? $v['tbltag'] : '';
@@ -172,26 +181,24 @@ if (!empty($com) && !in_array($com, ['tim-kiem', 'account', 'sitemap'])) {
             }
         }
     }
+
+    $collect = new \Illuminate\Support\Collection($requick);
+
+    $allComs = $collect->map(function ($key){
+        return $key['com'];
+    })->unique();
+
+    $object = $collect->filter(function ($value) use ($com){
+        return $value['com'] == $com && $value['field'] == 'id';
+    })->first();
+
+    $source = $object['source'] ?? '';
+    $template = "{$source}/{$source}" . (isset($_GET['id']) ? "_detail" : "");
+    $seo->set('type', isset($_GET['id']) ? "article" : "object");
+    $titleMain = $config[$source][$object['type'] ?? null]['title_main'] ?? '';
+    $type = $object['type'] ?? null;
+
 }
-
-
-
-$collect = new \Illuminate\Support\Collection($requick);
-
-$allComs = $collect->map(function ($key){
-    return $key['com'];
-})->unique();
-
-$object = $collect->filter(function ($value) use ($com){
-    return $value['com'] == $com && $value['field'] == 'id';
-})->first();
-
-
-$source = $object['source'] ?? '';
-$template = "{$source}/{$source}" . (isset($_GET['id']) ? "_detail" : "");
-$seo->set('type', isset($_GET['id']) ? "article" : "object");
-$titleMain = $config[$key][$object['type'] ?? null]['title_main'] ?? '';
-$type = $object['type'] ?? null;
 
 switch ($com){
     case '':
@@ -212,12 +219,12 @@ switch ($com){
         $seo->set('type', 'object');
         $titleMain = "Tìm Kiếm";
         break;
-    case 'du-toan-chi-phi':
-        $source = "dutoanchiphi";
-        $template = "action/dutoanchiphi";
-        $seo->set('type', 'object');
-        $titleMain = "DỰ TOÁN CHI PHÍ";
-        break;
+//    case 'du-toan-chi-phi':
+//        $source = "dutoanchiphi";
+//        $template = "action/dutoanchiphi";
+//        $seo->set('type', 'object');
+//        $titleMain = "DỰ TOÁN CHI PHÍ";
+//        break;
 }
 
 //dump($source, $template, $type, $_REQUEST);
