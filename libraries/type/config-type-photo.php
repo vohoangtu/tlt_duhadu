@@ -103,7 +103,32 @@ $config['photo']['man_photo'][$nametype]['width_photo'] = 1366;
 $config['photo']['man_photo'][$nametype]['height_photo'] = 600;
 $config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
 $config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
-
+/* Slideshow */
+$nametype = "slide-social";
+$config['photo']['man_photo'][$nametype]['title_main_photo'] = "Slide Socials";
+$config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => "Hiển thị");
+$config['photo']['man_photo'][$nametype]['number_photo'] = 2;
+$config['photo']['man_photo'][$nametype]['images_photo'] = true;
+$config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
+$config['photo']['man_photo'][$nametype]['link_photo'] = true;
+$config['photo']['man_photo'][$nametype]['name_photo'] = true;
+$config['photo']['man_photo'][$nametype]['width_photo'] = 600;
+$config['photo']['man_photo'][$nametype]['height_photo'] = 400;
+$config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
+$config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
+/* Slideshow */
+$nametype = "slide-qc";
+$config['photo']['man_photo'][$nametype]['title_main_photo'] = "Slide QC";
+$config['photo']['man_photo'][$nametype]['check_photo'] = array("hienthi" => "Hiển thị");
+$config['photo']['man_photo'][$nametype]['number_photo'] = 2;
+$config['photo']['man_photo'][$nametype]['images_photo'] = true;
+$config['photo']['man_photo'][$nametype]['avatar_photo'] = true;
+$config['photo']['man_photo'][$nametype]['link_photo'] = true;
+$config['photo']['man_photo'][$nametype]['name_photo'] = true;
+$config['photo']['man_photo'][$nametype]['width_photo'] = 1920;
+$config['photo']['man_photo'][$nametype]['height_photo'] = 400;
+$config['photo']['man_photo'][$nametype]['thumb_photo'] = '200x100x1';
+$config['photo']['man_photo'][$nametype]['img_type_photo'] = '.jpg|.gif|.png|.jpeg|.gif';
 /* Slideshow product */
 //$nametype = "slide-product";
 //$config['photo']['man_photo'][$nametype]['title_main_photo'] = "Slideshow sản phẩm";
